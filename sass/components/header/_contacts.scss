@@ -1,0 +1,31 @@
+.contacts {
+  margin-left: auto;
+}
+
+.contacts__link {
+  display: flex;
+  fill: $secondaryTextColor;
+  color: $secondaryTextColor;
+  text-decoration: none;
+
+  transition: fill 250ms $mainAnimationFunction, color 250ms $mainAnimationFunction;
+
+  &:hover,
+  &:focus {
+    color: $brandColor;
+    fill: $brandColor;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}

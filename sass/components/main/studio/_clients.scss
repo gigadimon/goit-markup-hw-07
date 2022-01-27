@@ -1,0 +1,26 @@
+.clients__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: $mainLinksIconsColor;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $mainLinksIconsColor;
+  border-radius: 4px;
+
+  transition: fill 250ms $mainAnimationFunction, border 250ms $mainAnimationFunction;
+
+  &:hover,
+  &:focus {
+    fill: $brandColor;
+    border: 1px solid $brandColor;
+  }
+}

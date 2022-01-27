@@ -1,0 +1,74 @@
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: -30px;
+}
+
+.projects__item {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  transition: box-shadow 250ms $mainAnimationFunction;
+
+  &:nth-child(-n + 3) {
+    margin-top: 0px;
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+}
+
+.projects__text {
+  padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.projects__name {
+  color: $mainTextColor;
+  letter-spacing: 0.06em;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.projects__type {
+  margin-top: 4px;
+
+  color: $secondaryTextColor;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.projects__item:hover .overlay {
+  transform: translateY(0%);
+}
+
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  padding: 63px 24px;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms $mainAnimationFunction;
+}
+
+.overlay__text {
+  color: $mainBcgColor;
+  font-size: 18px;
+  line-height: 1.56;
+}
