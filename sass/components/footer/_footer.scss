@@ -5,8 +5,31 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+.footer__768-wrapper {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 }
 
 .join {

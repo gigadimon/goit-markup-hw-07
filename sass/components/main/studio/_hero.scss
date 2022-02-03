@@ -7,16 +7,21 @@
   background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%, rgba(47, 48, 58, 0.4) 100%),
     url('../images/hero-bcg.jpg');
   background-repeat: no-repeat;
-  background-size: 1600px;
+  background-size: cover;
   background-position: center;
 }
 
 .hero__title {
   color: $mainBcgColor;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

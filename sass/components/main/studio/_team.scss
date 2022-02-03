@@ -3,8 +3,17 @@
 }
 
 .team__member-list {
-  margin-top: 50px;
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+
+    // центрирует список
+    margin: 0 auto;
+    width: 738px;
+  }
 }
 
 .team__networks {
@@ -12,13 +21,41 @@
 }
 
 .team__member-item {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
   background-color: $mainBcgColor;
-  width: 270px;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:nth-child(2n + 1) {
+      margin-left: 0px;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    padding-bottom: 30px;
+  }
 }
 
 .team__member-name {

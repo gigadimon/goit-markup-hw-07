@@ -1,10 +1,24 @@
 .projects__filter {
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: -15px;
+  }
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+// пытался дать нижний маржин через nth-child только нескольким элементам, чтобы не нарушать отступ от нижнего списка проектов, но в таком случае
+// возникает проблема накладывания маржинов при ширине 642 и получается, что от 642 до 767 отступ больше, чем должен быть. решил эту проблему,
+// дав всем элементам фильтра нижний маржин и дав такой же отрицательный у списка.
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__button {

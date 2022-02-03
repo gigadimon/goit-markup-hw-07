@@ -3,9 +3,17 @@
 
   display: inline-flex;
   align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
 
-  font-size: 14px;
-  line-height: 1.71;
+  @media screen and (min-width: 480px) {
+    white-space: nowrap;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
   color: $secondaryTextColor;
 
   &:hover {

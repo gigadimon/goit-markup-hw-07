@@ -16,7 +16,8 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+.burger-navigation,
+.burger-contacts,
 .nav__list,
 .contacts,
 .peculiarities__list,
@@ -26,27 +27,44 @@ ul {
 .projects__filter,
 .projects__list,
 .clients__list,
-.networks {
+.networks,
+.social-networks {
   list-style-type: none;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .section__title {
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.19;
   text-align: center;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .img {
@@ -56,8 +74,19 @@ ul {
 .main-list-item {
   position: relative;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

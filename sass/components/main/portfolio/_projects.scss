@@ -1,24 +1,66 @@
 .projects__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: -30px;
+  margin-top: 30px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 738px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+    margin-left: -30px;
+  }
 }
 
 .projects__item {
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
 
   transition: box-shadow 250ms $mainAnimationFunction;
-
-  &:nth-child(-n + 3) {
-    margin-top: 0px;
-  }
 
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: 370px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .projects__item:nth-child(-n + 3) {
+    margin-top: 0px;
   }
 }
 
@@ -28,6 +70,12 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .projects__item:first-child & {
+      padding-bottom: 56px;
+    }
+  }
 }
 
 .projects__name {
@@ -56,15 +104,25 @@
 
 .overlay {
   position: absolute;
-
-  background-color: rgba(33, 150, 243, 0.9);
-  width: 100%;
-  padding: 63px 24px;
   top: 0;
   left: 0;
 
+  background-color: rgba(33, 150, 243, 0.9);
+
+  width: 100%;
+  height: 100%;
+  padding: 77px 24px;
+
   transform: translateY(100%);
   transition: transform 250ms $mainAnimationFunction;
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 
 .overlay__text {

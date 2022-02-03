@@ -4,6 +4,11 @@
 @import 'components/header/header';
 @import 'components/header/nav';
 @import 'components/header/contacts';
+@import 'components/header/burger-menu/burger-menu';
+@import 'components/header/burger-menu/social-networks';
+@import 'components/header/burger-menu/menu-toggle';
+@import "components/header/burger-menu/nav";
+@import "components/header/burger-menu/contacts";
 @import 'components/main/studio/hero';
 @import 'components/main/studio/peculiarities';
 @import 'components/main/studio/areas-work';

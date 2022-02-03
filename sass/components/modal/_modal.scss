@@ -9,6 +9,9 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 500ms $mainAnimationFunction, visibility 500ms $mainAnimationFunction;
+
+  @media screen and (max-width: 479px) {
+  }
 }
 
 .is-hidden {
@@ -22,15 +25,34 @@
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
-  min-height: 581px;
+  overflow-y: scroll;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  // применил такие значения, чтобы модалка выглядела эстетично на любом экране меньше w480. пробовал разные варианты - этот наиболее оптимальный получился
+  // по ключевым точкам - всё по макету
+  @media screen and (max-width: 479px) {
+    // 93.75% - это процентное соотношение ширины модалки 450px при vw480. применил такое к wv<480 чтобы не было скачка при переходе в точке w480/479px
+    width: 93.75%;
+    min-height: 90%;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+
   padding: 40px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
 
   transition: transform 500ms $mainAnimationFunction;
 }

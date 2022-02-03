@@ -11,8 +11,11 @@
 
 .modal__title {
   font-size: 20px;
-  line-height: 1.15;
-
+  line-height: 1.5;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
   margin-bottom: 12px;
 }
 

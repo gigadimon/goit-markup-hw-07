@@ -51,10 +51,61 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon">
+            <use href="images/symbol-defs.svg#icon-burger-open"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Основная часть -->
     <main>
+      <!-- бургер меню -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu-toggle__icon">
+            <use href="images/symbol-defs.svg#icon-burger-close"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-navigation">
+          <li class="burger-navigation__item">
+            <a href="./index.html" class="burger-navigation__link">Студия</a>
+          </li>
+          <li class="burger-navigation__item">
+            <a
+              href="./portfolio.html"
+              class="burger-navigation__link burger-navigation__link--active"
+              >Портфолио</a
+            >
+          </li>
+          <li class="burger-navigation__item">
+            <a href="#" class="burger-navigation__link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="burger-contacts">
+          <li class="burger-contacts__item">
+            <a href="tel:+380961111111" class="burger-contacts__link">+38 096 111 11 11</a>
+          </li>
+          <li class="burger-contacts__item">
+            <a href="mailto:info@devstudio.com" class="burger-contacts__link">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="social-networks">
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Instagram</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Twitter</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Facebook</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
       <!-- Проекты -->
       <section class="projects section">
         <div class="container">
@@ -84,7 +135,7 @@
                 <img
                   src="./images/tehnocrack-website.jpg"
                   alt="Экран ноутбука с открытым вебсайтом"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -105,7 +156,7 @@
                 <img
                   src="./images/poster-prjct.jpg"
                   alt="Два баскетболиста борятся за мяч"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -126,7 +177,7 @@
                 <img
                   src="./images/seafood-app.jpg"
                   alt="Название ресторана с рыбой на фоне"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -144,7 +195,7 @@
             </li>
             <li class="projects__item">
               <div class="overlay-wrapper">
-                <img src="./images/project-prime.jpg" alt="Наушники" width="370" class="img" />
+                <img src="./images/project-prime.jpg" alt="Наушники" width="100%" class="img" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -160,7 +211,7 @@
             </li>
             <li class="projects__item">
               <div class="overlay-wrapper">
-                <img src="./images/project-boxes.jpg" alt="Две коробки" width="370" class="img" />
+                <img src="./images/project-boxes.jpg" alt="Две коробки" width="100%" class="img" />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -179,7 +230,7 @@
                 <img
                   src="./images/ihnb-website.jpg"
                   alt="Экран монитора с открытым вебсайтом"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -200,7 +251,7 @@
                 <img
                   src="./images/limed-design.jpg"
                   alt="Раскрытый журнал"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -218,7 +269,12 @@
             </li>
             <li class="projects__item">
               <div class="overlay-wrapper">
-                <img src="./images/lab-project.jpg" alt="Бирка с буквами" width="370" class="img" />
+                <img
+                  src="./images/lab-project.jpg"
+                  alt="Бирка с буквами"
+                  width="100%"
+                  class="img"
+                />
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -237,7 +293,7 @@
                 <img
                   src="./images/gb-app.jpg"
                   alt="Ноутбук с открытым вебсайтом и руками на клавиатуре"
-                  width="370"
+                  width="100%"
                   class="img"
                 />
                 <div class="overlay">
@@ -260,64 +316,68 @@
     <!-- Подвал -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer-contacts-wrapper">
-          <a href="./index.html" class="logo footer__logo"><span class="accent">Web</span>Studio</a>
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a
-                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/data=!4m2!3m1!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0?sa=X&ved=2ahUKEwjH0LS6oNL0AhUNr6QKHVNQCV0Q8gF6BAgFEAE"
-                  class="address__link address__link--location"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+        <div class="footer__768-wrapper">
+          <div class="footer__contacts-wrapper">
+            <a href="./index.html" class="logo footer__logo"
+              ><span class="accent">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/data=!4m2!3m1!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0?sa=X&ved=2ahUKEwjH0LS6oNL0AhUNr6QKHVNQCV0Q8gF6BAgFEAE"
+                    class="address__link address__link--location"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a href="mailto:info@example.com" class="address__link address__link--contact"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a href="tel:+380991111111" class="address__link address__link--contact"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <!-- Соцсети в футере -->
+          <div class="networks-wrapper">
+            <p class="join">Присоединяйтесь</p>
+            <ul class="networks footer__networks">
+              <li class="networks__item">
+                <a href="" class="networks__link">
+                  <svg width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address__item">
-                <a href="mailto:info@example.com" class="address__link address__link--contact"
-                  >info@example.com</a
-                >
+              <li class="networks__item">
+                <a href="" class="networks__link">
+                  <svg width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a href="tel:+380991111111" class="address__link address__link--contact"
-                  >+38 099 111 11 11</a
-                >
+              <li class="networks__item">
+                <a href="" class="networks__link">
+                  <svg width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="" class="networks__link">
+                  <svg width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <!-- Соцсети в футере -->
-        <div class="networks-wrapper">
-          <p class="join">Присоединяйтесь</p>
-          <ul class="networks footer__networks">
-            <li class="networks__item">
-              <a href="" class="networks__link">
-                <svg width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link">
-                <svg width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link">
-                <svg width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link">
-                <svg width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <!-- Инпут "подпишись" -->
         <form name="subscription_form" class="subscription">
@@ -334,5 +394,13 @@
         </form>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

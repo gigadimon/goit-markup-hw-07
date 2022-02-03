@@ -2,10 +2,25 @@
   border-bottom: 1px solid #ececec;
 }
 
-.nav__list,
-.contacts,
-.header__container,
-.nav {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .nav__list,
+  .contacts,
+  .header__container,
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
