@@ -70,7 +70,9 @@
 
         <ul class="burger-navigation">
           <li class="burger-navigation__item">
-            <a href="./index.html" class="burger-navigation__link burger-navigation__link--active">Студия</a>
+            <a href="./index.html" class="burger-navigation__link burger-navigation__link--active"
+              >Студия</a
+            >
           </li>
           <li class="burger-navigation__item">
             <a href="./portfolio.html" class="burger-navigation__link">Портфолио</a>
@@ -80,7 +82,9 @@
           </li>
         </ul>
         <ul class="burger-contacts">
-          <li class="burger-contacts__item"><a href="tel:+380961111111" class="burger-contacts__link">+38 096 111 11 11</a></li>
+          <li class="burger-contacts__item">
+            <a href="tel:+380961111111" class="burger-contacts__link">+38 096 111 11 11</a>
+          </li>
           <li class="burger-contacts__item">
             <a href="mailto:info@devstudio.com" class="burger-contacts__link">info@devstudio.com</a>
           </li>
@@ -166,6 +170,7 @@
           <ul class="areas-work__list">
             <li class="main-list-item">
               <img
+                srcset="./images/coding-image.jpg 1x, ./images/coding-image@2x.jpg 2x"
                 src="./images/coding-image.jpg"
                 alt="Написание кода"
                 width="370"
@@ -175,6 +180,7 @@
             </li>
             <li class="main-list-item">
               <img
+                srcset="./images/development-image.jpg 1x, ./images/development-image@2x.jpg 2x"
                 src="./images/development-image.jpg"
                 alt="Веб разработка"
                 width="370"
@@ -184,6 +190,7 @@
             </li>
             <li class="main-list-item">
               <img
+                srcset="./images/design-image.jpg 1x, ./images/design-image@2x.jpg 2x"
                 src="./images/design-image.jpg"
                 alt="Дизайн"
                 width="370"
@@ -200,12 +207,36 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__member-list">
             <li class="team__member-item main-list-item">
-              <img
-                src="./images/product-designer-avatar.jpg"
-                alt="Продукт дизайнер"
-                width="100%"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product-designer-avatar.jpg         1x,
+                    ./images/product-designer-avatar-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-avatar-768.jpg    1x,
+                    ./images/product-designer-avatar-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-avatar-480.jpg    1x,
+                    ./images/product-designer-avatar-480@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/product-designer-avatar.jpg"
+                  alt="Продукт дизайнер"
+                  width="100%"
+                  class="img"
+                />
+              </picture>
+
               <h3 class="team__member-name">Игорь Демьяненко</h3>
               <p class="team__member-specialization">Product Designer</p>
               <ul class="networks team__networks">
@@ -240,12 +271,36 @@
               </ul>
             </li>
             <li class="team__member-item main-list-item">
-              <img
-                src="./images/frontend-developer-avarat.jpg"
-                alt="Фронтент разработчик"
-                width="100%"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontend-developer-avarat.jpg         1x,
+                    ./images/frontend-developer-avarat-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-avarat-768.jpg    1x,
+                    ./images/frontend-developer-avarat-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-avarat-480.jpg    1x,
+                    ./images/frontend-developer-avarat-480@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/frontend-developer-avarat.jpg"
+                  alt="Фронтент разработчик"
+                  width="100%"
+                  class="img"
+                />
+              </picture>
+
               <h3 class="team__member-name">Ольга Репина</h3>
               <p class="team__member-specialization">Frontend Developer</p>
               <ul class="networks team__networks">
@@ -280,12 +335,36 @@
               </ul>
             </li>
             <li class="team__member-item main-list-item">
-              <img
-                src="./images/marketing-manager-avatar.jpg"
-                alt="Маркетинг менеджер"
-                width="100%"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/marketing-manager-avatar.jpg         1x,
+                    ./images/marketing-manager-avatar-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-manager-avatar-768.jpg    1x,
+                    ./images/marketing-manager-avatar-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-manager-avatar-480.jpg    1x,
+                    ./images/marketing-manager-avatar-480@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/marketing-manager-avatar.jpg"
+                  alt="Маркетинг менеджер"
+                  width="100%"
+                  class="img"
+                />
+              </picture>
+
               <h3 class="team__member-name">Николай Тарасов</h3>
               <p class="team__member-specialization">Marketing</p>
               <ul class="networks team__networks">
@@ -320,12 +399,36 @@
               </ul>
             </li>
             <li class="team__member-item main-list-item">
-              <img
-                src="./images/ui-designer-avatar.jpg"
-                alt="Дизайнер интерфейсов"
-                width="100%"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ui-designer-avatar.jpg         1x,
+                    ./images/ui-designer-avatar-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-avatar-768.jpg    1x,
+                    ./images/ui-designer-avatar-768@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-avatar-480.jpg    1x,
+                    ./images/ui-designer-avatar-480@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/ui-designer-avatar.jpg"
+                  alt="Дизайнер интерфейсов"
+                  width="100%"
+                  class="img"
+                />
+              </picture>
+
               <h3 class="team__member-name">Михаил Ермаков</h3>
               <p class="team__member-specialization">UI Designer</p>
               <ul class="networks team__networks">
